@@ -46,16 +46,47 @@ int main() {
 
 	// find the size of different type of variable
 
-	int num;
-	float ammount;
-	char name;
-	bool isTrue;
+	//int num;
+	//float ammount;
+	//char name;
+	//bool isTrue;
 
-	printf("%lu\n", sizeof(int));
+	//printf("%lu\n", sizeof(int));
 
-	printf("The size of int %d\n", sizeof(num));
-	printf("The size of float %d\n", sizeof(ammount));
-	printf("The size of char %d\n", sizeof(name));
-	printf("The size of bool %d\n", sizeof(isTrue));
+	//printf("The size of int %d\n", sizeof(num));
+	//printf("The size of float %d\n", sizeof(ammount));
+	//printf("The size of char %d\n", sizeof(name));
+	//printf("The size of bool %d\n", sizeof(isTrue));
+
+
+	//pointer
+
+	int a = 10;
+	int* p;
+	p = &a;
+	printf("*p = %d\n", *p);
+	printf("The value of p is %p\n", p);
+	printf("The address of p is %p\n", p);
+	printf("The address of a is %p\n\n\n", &a);
+
+
+	double pi = 3.1416;
+	// can't assign double to int pointer
+	//int* ptr;
+
+	double* ptr;
+
+	ptr = &pi;
+
+	printf("*ptr = %lf\n", *ptr);
+	printf("The value of ptr is %p\n", ptr);
+
+	*ptr = 5.7569;
+
+	printf("After changing the value of *ptr\n");
+	printf("pi = %lf\n", pi);
+	printf("*ptr = %lf\n", *ptr);
+	printf("The value of ptr is %p\n", ptr);
+
 	return 0;
 }
