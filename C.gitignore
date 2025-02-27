@@ -118,3 +118,34 @@ x86/
 *.ncb
 *.opensdf
 *.sdf
+
+# Ignore Visual Studio files and directories
+.vs/
+*.suo
+*.user
+*.VC.db
+*.VC.db-shm
+*.VC.db-wal
+*.VC.opendb
+*.lpch
+*.sdf
+*.opensdf
+*.idb
+*.ipch
+*.pdb
+*.tlog
+*.log
+*.ilk
+*.obj
+*.aps
+*.ncb
+
+# Ignore Copilot-related files
+CopilotIndices/
+copilot-chat/
+
+# Ignore solution and project user-specific files
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
