@@ -1,3 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+
 # Prerequisites
 *.d
 
@@ -150,3 +155,6 @@ copilot-chat/
 *.vcxproj.filters
 *.vcxproj.user
 hello World/.vs/
+
+/ComputerProgrammingPart2/.vs/ComputerProgrammingPart2
+/hello World/.vs/hello
