@@ -70,9 +70,11 @@ int CountListItem(node* myList) {
 }
 
 
-void InsertNode(int value) {
+void InsertNodeAtLastPostition(int value) {
 	node* tempNode;
 	tempNode = (node*)malloc(sizeof(node));
+	tempNode->number = value;
+	tempNode->next = NULL;
 
 	// for the first element
 	if (head == NULL) {
@@ -82,5 +84,50 @@ void InsertNode(int value) {
 	else {
 		last->next = tempNode;
 		last = tempNode;
+	}
+}
+
+void InsertNodeAtFirstPosition(int value) {
+	node* tempNode;
+	tempNode = (node*)malloc(sizeof(node));
+
+	tempNode->number = value;
+	tempNode->next = NULL;
+
+	if (head == NULL) {
+		head = tempNode;
+		last = tempNode;
+	}
+	else {
+		tempNode->next = head;
+		head = tempNode;
+	}
+}
+
+
+void InsertNodeAtTheMiddlePosition(int key, int value) {
+	node* myNode = head;
+	int flag = 0;
+
+	while (myNode != NULL) {
+		if (myNode->number == key) {
+
+			node* newNode;
+			newNode = (node*)malloc(sizeof(node));
+			newNode->number = value;
+
+			newNode->next = myNode->next;
+			myNode->next = newNode;
+
+			flag = 1;
+			break;
+		}
+		else {
+			myNode = myNode->next;
+		}
+	}
+
+	if (flag == 0) {
+		printf("key not found");
 	}
 }
