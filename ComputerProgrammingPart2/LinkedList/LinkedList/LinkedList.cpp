@@ -8,7 +8,7 @@ struct linked_list {
 
 typedef struct linked_list node;
 
-
+node* head = NULL; node* last = NULL;
 
 int main() {
 
@@ -67,4 +67,20 @@ int CountListItem(node* myList) {
 		return 0;
 	}
 	return (1 + CountListItem(myList->next));
+}
+
+
+void InsertNode(int value) {
+	node* tempNode;
+	tempNode = (node*)malloc(sizeof(node));
+
+	// for the first element
+	if (head == NULL) {
+		head = tempNode;
+		last = tempNode;
+	}
+	else {
+		last->next = tempNode;
+		last = tempNode;
+	}
 }
