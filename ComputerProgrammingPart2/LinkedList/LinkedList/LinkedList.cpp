@@ -131,3 +131,38 @@ void InsertNodeAtTheMiddlePosition(int key, int value) {
 		printf("key not found");
 	}
 }
+
+
+void DeleteNode(int value) {
+	node* myNode = head, * previousNode = NULL;
+	int flag = 0;
+
+	while (myNode != NULL) {
+
+		if (myNode->number == value) {
+
+			//check whether it's the first node
+			if (previousNode == NULL) {
+				head = myNode->next;
+			}
+			else {
+				previousNode->next = myNode->next;
+			}
+
+			free(myNode);
+			flag = 1;
+			printf("%d is deleted from the list\n", value);
+
+		}
+		else {
+			previousNode = myNode;
+			myNode = myNode->next;
+		}
+
+
+	}
+
+	if (flag == 0) {
+		printf("No node found to delete");
+	}
+}
