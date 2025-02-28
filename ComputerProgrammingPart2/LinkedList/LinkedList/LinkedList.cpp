@@ -158,11 +158,28 @@ void DeleteNode(int value) {
 			previousNode = myNode;
 			myNode = myNode->next;
 		}
-
-
 	}
 
 	if (flag == 0) {
 		printf("No node found to delete");
+	}
+}
+
+
+void SearchNode(int value) {
+	node* searchNode = head;
+	int flag = 0;
+
+	while (searchNode != NULL) {
+		if (searchNode->number == value) {
+			printf("%d exit in the list. The memory address is %p", value, searchNode);
+			flag = 1;
+			break;
+		}
+		searchNode = searchNode->next;
+	}
+
+	if (flag == 0) {
+		printf("No node found with this value %d", value);
 	}
 }
