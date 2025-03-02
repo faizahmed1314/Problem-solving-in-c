@@ -61,7 +61,7 @@ int main() {
 
 	//pointer
 
-	int a = 10;
+	/*int a = 10;
 	int* p;
 	p = &a;
 	printf("*p = %d\n", *p);
@@ -70,11 +70,11 @@ int main() {
 	printf("The address of a is %p\n\n\n", &a);
 
 
-	double pi = 3.1416;
+	double pi = 3.1416;*/
 	// can't assign double to int pointer
 	//int* ptr;
 
-	double* ptr;
+	/*double* ptr;
 
 	ptr = &pi;
 
@@ -86,7 +86,24 @@ int main() {
 	printf("After changing the value of *ptr\n");
 	printf("pi = %lf\n", pi);
 	printf("*ptr = %lf\n", *ptr);
-	printf("The value of ptr is %p\n", ptr);
+	printf("The value of ptr is %p\n", ptr);*/
+
+
+	// pointer assignment example
+
+	int x = 10, y;
+	int* p, *q;
+
+	p = &x;
+	q = &y;
+	y = *p;
+	*p = 15;
+	*q = 20;
+
+	printf("x = %d\n", x);
+	printf("y = %d\n", y);
+	printf("*p = %d\n", *p);
+	printf("*q = %d\n", *q);
 
 	return 0;
 }
