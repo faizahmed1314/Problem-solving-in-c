@@ -91,19 +91,38 @@ int main() {
 
 	// pointer assignment example
 
-	int x = 10, y;
-	int* p, *q;
+	//int x = 10, y;
+	//int* p, *q;
 
-	p = &x;
-	q = &y;
-	y = *p;
-	*p = 15;
-	*q = 20;
+	//p = &x;
+	//q = &y;
+	//y = *p;
+	//*p = 15;
+	//*q = 20;
 
-	printf("x = %d\n", x);
-	printf("y = %d\n", y);
-	printf("*p = %d\n", *p);
-	printf("*q = %d\n", *q);
+	//printf("x = %d\n", x);
+	//printf("y = %d\n", y);
+	//printf("*p = %d\n", *p);
+	//printf("*q = %d\n", *q);
+
+
+	// Null pointer 
+
+	//int* p = NULL;
+	 int x = 10;
+	 int* ptr = NULL;
+
+	 printf("The value of x is %d\n", x);
+
+	 // Below line will give you an error
+	 //printf("The content of ptr is %d\n", *ptr);
+
+	 // Assigning the address of x to ptr
+	 // Now ptr is not a null pointer
+	 // It is pointing to the address of x
+	 // So, it will not give you an error
+	 ptr = &x;
+	 printf("The content of ptr is %d\n", *ptr);
 
 	return 0;
 }
