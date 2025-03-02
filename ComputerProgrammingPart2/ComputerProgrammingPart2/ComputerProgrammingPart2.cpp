@@ -108,21 +108,32 @@ int main() {
 
 	// Null pointer 
 
-	//int* p = NULL;
-	 int x = 10;
-	 int* ptr = NULL;
+	////int* p = NULL;
+	// int x = 10;
+	// int* ptr = NULL;
 
-	 printf("The value of x is %d\n", x);
+	// printf("The value of x is %d\n", x);
 
-	 // Below line will give you an error
-	 //printf("The content of ptr is %d\n", *ptr);
+	// // Below line will give you an error
+	// //printf("The content of ptr is %d\n", *ptr);
 
-	 // Assigning the address of x to ptr
-	 // Now ptr is not a null pointer
-	 // It is pointing to the address of x
-	 // So, it will not give you an error
-	 ptr = &x;
-	 printf("The content of ptr is %d\n", *ptr);
+	// // Assigning the address of x to ptr
+	// // Now ptr is not a null pointer
+	// // It is pointing to the address of x
+	// // So, it will not give you an error
+	// ptr = &x;
+	// printf("The content of ptr is %d\n", *ptr);
 
+	// pointer and string
+
+	// string it's a character array
+	// string is a constant pointer or the address of the memory location of the first character of the string  
+	char str[] = "Hello World";
+	printf("The value of str is %s\n", str);
+	printf("The address of str is %p\n", str);
+
+	char* p = str;
+	printf("The value of p is %s\n", p);
+	printf("The address of p is %p\n", p);
 	return 0;
 }
