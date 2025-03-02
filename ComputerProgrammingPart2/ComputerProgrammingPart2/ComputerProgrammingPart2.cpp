@@ -128,12 +128,27 @@ int main() {
 
 	// string it's a character array
 	// string is a constant pointer or the address of the memory location of the first character of the string  
-	char str[] = "Hello World";
-	printf("The value of str is %s\n", str);
-	printf("The address of str is %p\n", str);
+	//char str[] = "Hello World";
+	//printf("The value of str is %s\n", str);
+	//printf("The address of str is %p\n", str);
 
-	char* p = str;
-	printf("The value of p is %s\n", p);
-	printf("The address of p is %p\n", p);
+	//char* p = str;
+	//printf("The value of p is %s\n", p);
+	//printf("The address of p is %p\n", p);
+
+	// character type pointer
+
+	char a = 'A';
+	char B = 'B';
+	char c = 'C';
+
+	char* p1, * p2, * p3;
+	p1 = &a;
+	p2 = &B;
+	p3 = &c;
+
+	printf("The content of p1 is %c\n", *p1);
+	printf("The content of p2 is %c\n", *p2);
+	printf("The content of p3 is %c\n", *p3);
 	return 0;
 }
