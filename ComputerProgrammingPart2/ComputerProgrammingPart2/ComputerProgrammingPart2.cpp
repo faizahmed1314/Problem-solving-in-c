@@ -160,6 +160,8 @@ int main() {
 	printf("The address of a is %p\n", p1);
 	printf("The address of p1 is %p\n", &p1);
 	q = &p1;
+
+	**q = 'B';
 	printf("The address of q is %p\n\n", &q);
 	printf("The content of a is %c\n", a);
 	printf("The content of p is %c\n", *p1);
