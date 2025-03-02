@@ -138,17 +138,32 @@ int main() {
 
 	// character type pointer
 
+	//char a = 'A';
+	//char B = 'B';
+	//char c = 'C';
+
+	//char* p1, * p2, * p3;
+	//p1 = &a;
+	//p2 = &B;
+	//p3 = &c;
+
+	//printf("The content of p1 is %c\n", *p1);
+	//printf("The content of p2 is %c\n", *p2);
+	//printf("The content of p3 is %c\n", *p3);
+
+	// pointer of pointer
+	
 	char a = 'A';
-	char B = 'B';
-	char c = 'C';
-
-	char* p1, * p2, * p3;
+	char* p1;
+	char** q;
 	p1 = &a;
-	p2 = &B;
-	p3 = &c;
+	printf("The address of a is %p\n", p1);
+	printf("The address of p1 is %p\n", &p1);
+	q = &p1;
+	printf("The address of q is %p\n\n", &q);
+	printf("The content of a is %c\n", a);
+	printf("The content of p is %c\n", *p1);
+	printf("The content of q is %c\n", **q);
 
-	printf("The content of p1 is %c\n", *p1);
-	printf("The content of p2 is %c\n", *p2);
-	printf("The content of p3 is %c\n", *p3);
 	return 0;
 }
