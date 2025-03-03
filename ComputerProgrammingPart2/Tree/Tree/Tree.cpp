@@ -82,6 +82,18 @@ void PostOrder_Traversal(Node* node) {
 }
 
 
+void InOrder_Traversal(Node* node) {
+	if (node->left != NULL) {
+		InOrder_Traversal(node->left);
+	}
+
+	printf("%d\n", node->data);
+
+	if (node->right != NULL) {
+		InOrder_Traversal(node->right);
+	}
+}
+
 int main() {
 	Node* root = Create_Tree();
 
@@ -91,6 +103,9 @@ int main() {
 
 	printf("Post order traverse\n");
 	PostOrder_Traversal(root);
+
+	printf("In order traverse\n");
+	InOrder_Traversal(root);
 
 	return 0;
 }
