@@ -60,10 +60,22 @@ Node* Create_Tree() {
 	return two;
 }
 
-
+void PreOrder_Traversal(Node* node) {
+	printf("%d\n", node->data);
+	if (node->left != NULL) {
+		PreOrder_Traversal(node->left);
+	}
+	if (node->right != NULL) {
+		PreOrder_Traversal(node->right);
+	}
+}
 
 int main() {
 	Node* root = Create_Tree();
 
-	printf("The root node value is %d", root->data);
+	printf("The root node value is %d\n", root->data);
+
+	PreOrder_Traversal(root);
+
+	return 0;
 }
