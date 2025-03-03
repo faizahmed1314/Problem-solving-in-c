@@ -70,12 +70,27 @@ void PreOrder_Traversal(Node* node) {
 	}
 }
 
+
+void PostOrder_Traversal(Node* node) {
+	if (node->left != NULL) {
+		PostOrder_Traversal(node->left);
+	}
+	if (node->right != NULL) {
+		PostOrder_Traversal(node->right);
+	}
+	printf("%d\n", node->data);
+}
+
+
 int main() {
 	Node* root = Create_Tree();
 
 	printf("The root node value is %d\n", root->data);
-
+	printf("Pre order traverse\n");
 	PreOrder_Traversal(root);
+
+	printf("Post order traverse\n");
+	PostOrder_Traversal(root);
 
 	return 0;
 }
