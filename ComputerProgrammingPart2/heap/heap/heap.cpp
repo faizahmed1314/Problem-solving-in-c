@@ -39,10 +39,25 @@ void build_max_heap(int heap[], int heap_size) {
 	}
 }
 
+void heap_sort(int heap[], int heap_size) {
+	int i, temp;
+
+	build_max_heap(heap, heap_size);
+
+	for (i = heap_size; i > 1; i--) {
+		temp = heap[1];
+		heap[1] = heap[i];
+		heap[i] = temp;
+		heap_size -= 1;
+		max_heapify(heap, heap_size, 1);
+	}
+}
+
 int main() {
 	int heap[10] = { 0,19,7,12,3,5,17,10,1,2 };
 
-	build_max_heap(heap, 10);
+	//build_max_heap(heap, 10);
+	heap_sort(heap, 10);
 
 	for (int i = 0; i < 10; i++) {
 		printf("%d\n", heap[i]);
