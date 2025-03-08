@@ -108,21 +108,64 @@ int main() {
 
 	// Null pointer 
 
-	//int* p = NULL;
-	 int x = 10;
-	 int* ptr = NULL;
+	////int* p = NULL;
+	// int x = 10;
+	// int* ptr = NULL;
 
-	 printf("The value of x is %d\n", x);
+	// printf("The value of x is %d\n", x);
 
-	 // Below line will give you an error
-	 //printf("The content of ptr is %d\n", *ptr);
+	// // Below line will give you an error
+	// //printf("The content of ptr is %d\n", *ptr);
 
-	 // Assigning the address of x to ptr
-	 // Now ptr is not a null pointer
-	 // It is pointing to the address of x
-	 // So, it will not give you an error
-	 ptr = &x;
-	 printf("The content of ptr is %d\n", *ptr);
+	// // Assigning the address of x to ptr
+	// // Now ptr is not a null pointer
+	// // It is pointing to the address of x
+	// // So, it will not give you an error
+	// ptr = &x;
+	// printf("The content of ptr is %d\n", *ptr);
+
+	// pointer and string
+
+	// string it's a character array
+	// string is a constant pointer or the address of the memory location of the first character of the string  
+	//char str[] = "Hello World";
+	//printf("The value of str is %s\n", str);
+	//printf("The address of str is %p\n", str);
+
+	//char* p = str;
+	//printf("The value of p is %s\n", p);
+	//printf("The address of p is %p\n", p);
+
+	// character type pointer
+
+	//char a = 'A';
+	//char B = 'B';
+	//char c = 'C';
+
+	//char* p1, * p2, * p3;
+	//p1 = &a;
+	//p2 = &B;
+	//p3 = &c;
+
+	//printf("The content of p1 is %c\n", *p1);
+	//printf("The content of p2 is %c\n", *p2);
+	//printf("The content of p3 is %c\n", *p3);
+
+	// pointer of pointer
+	
+	char a = 'A';
+	char* p1;
+	char** q;
+	p1 = &a;
+	printf("The address of a is %p\n", p1);
+	printf("The address of p1 is %p\n", &p1);
+	q = &p1;
+
+	**q = 'B';
+	printf("The address of q is %p\n\n", &q);
+	printf("The content of a is %c\n", a);
+	printf("The content of p is %c\n", *p1);
+	printf("The content of q is %c\n", **q);
 
 	return 0;
 }
