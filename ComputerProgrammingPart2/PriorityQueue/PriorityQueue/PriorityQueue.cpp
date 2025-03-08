@@ -36,15 +36,13 @@ void Max_heapify(int heap[], int size, int parentIndex) {
 		temp = heap[parentIndex];
 		heap[parentIndex] = heap[largest];
 		heap[largest] = temp;
-		Max_heapify(heap, size, parentIndex);
+		Max_heapify(heap, size, largest);
 	}
 }
 
 int Extract_Item(int heap[], int size) {
 	int temp = heap[1];
-	int item = heap[size];
-	heap[1] = item;
-	heap[size] = temp;
+	heap[1] = heap[size - 1];
 	size--;
 	Max_heapify(heap, size, 1);
 	return temp;
@@ -83,11 +81,13 @@ int main() {
 	}
 
 
-	//int extractedItem = Extract_Item(heap, 10);
+	int extracteditem = Extract_Item(heap, 10);
 
-	//for (int i = 0; i < 10; i++) {
-	//	printf("%d\n", heap[i]);
-	//}
+	printf("extracteditem %d\n", extracteditem);
+
+	for (int i = 0; i < 9; i++) {
+		printf("%d\n", heap[i]);
+	}
 
 	return 0;
 }
