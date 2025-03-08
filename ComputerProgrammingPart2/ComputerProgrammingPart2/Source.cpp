@@ -91,7 +91,7 @@ int main() {
 	int newsize = Insert_Priority_Queue(heap, 9, 20);
 
 	printf("newsize %d\n", newsize);
-
+	
 	for (int i = 0; i < 10; i++) {
 		printf("%d\n", heap[i]);
 	}
