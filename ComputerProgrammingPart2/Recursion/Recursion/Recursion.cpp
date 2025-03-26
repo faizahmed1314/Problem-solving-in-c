@@ -1,17 +1,19 @@
 #include<stdio.h>
 //#include "Recursion.h"
 
-void recursion(int n) {
+void recursion() {
+
+	static int n = 1;
 	if (n > 5) {
 		return;
 	}
 	printf("%d\n", n);
-	recursion(n + 1);
-	printf("%d\n", n);
+	n = n + 1;
+	recursion();
 }
 
 
 int main() {
-	recursion(1);
+	recursion();
 	return 0;
 }
